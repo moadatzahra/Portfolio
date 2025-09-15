@@ -15,7 +15,7 @@ I design and execute high-impact campaigns across multiple channels:
 
 **My Work & Portfolio**  
 Explore my live portfolio for case studies, projects, and results:  
-👉 **Live Portfolio:** [https://moadatzahra.github.io/portfolio](https://YOURUSERNAME.github.io/portfolio)  
+👉 **Live Portfolio:** https://moadatzahra.github.io/Portfolio/
 
 **Let’s Connect**  
 Interested in collaborating or scaling your business?  
