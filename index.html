@@ -3,192 +3,159 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Moadat Zahra | Digital Marketing Strategist, SEO & Ads Expert</title>
-  <meta name="description" content="Moadat Zahra is a digital marketing strategist specializing in SEO, Meta & Google Ads, lead generation, and branding. Helping businesses grow traffic, boost reach, and maximize ROI.">
-  <meta name="keywords" content="Moadat Zahra, digital marketing strategist, SEO expert, Google Ads specialist, Meta Ads manager, lead generation, branding, content creation, online marketing, traffic growth, ROI optimization">
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
+  <title>Moadat Zahra | Portfolio</title>
   <style>
+    /* Reset & Fonts */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f7fafc;
+      background: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
     }
-    .text-gradient-purple {
-      background-image: linear-gradient(to right, #8b5cf6, #c084fc, #a855f7);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+
+    header {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
     }
-    .bg-gradient-purple {
-      background-image: linear-gradient(to right, #6d28d9, #8b5cf6);
+
+    header img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+      margin-bottom: 20px;
     }
-    .card {
-      transition: transform 0.3s, box-shadow 0.3s;
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
     }
-    .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-card h3 {
+      margin-bottom: 10px;
+      color: #2575fc;
+    }
+
+    form {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    form button {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      cursor: pointer;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    form button:hover {
+      background: linear-gradient(135deg, #2575fc, #6a11cb);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: #ddd;
+      margin-top: 40px;
     }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
-
-  <!-- Navigation -->
-  <header class="bg-white sticky top-0 z-50 shadow-lg">
-    <nav class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
-      <a href="#" class="text-3xl font-extrabold text-gradient-purple">Moadat Zahra</a>
-      <div class="hidden md:flex space-x-8 text-gray-600 font-medium">
-        <a href="#about" class="hover:text-purple-600">About</a>
-        <a href="#services" class="hover:text-purple-600">Services</a>
-        <a href="#portfolio" class="hover:text-purple-600">Work</a>
-        <a href="#contact" class="hover:text-purple-600">Contact</a>
-      </div>
-      <button id="menu-button" class="md:hidden text-gray-600">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-        </svg>
-      </button>
-    </nav>
-    <div id="mobile-menu" class="hidden md:hidden bg-white py-2 shadow-inner">
-      <a href="#about" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">About</a>
-      <a href="#services" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">Services</a>
-      <a href="#portfolio" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">Work</a>
-      <a href="#contact" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">Contact</a>
-    </div>
+<body>
+  <!-- Hero Section -->
+  <header>
+    <img src="mZ.jpeg" alt="Moadat Zahra Profile Photo" />
+    <h1>Moadat Zahra</h1>
+    <p>Customer Support Specialist | Digital Creator | Portfolio Showcase</p>
   </header>
 
-  <!-- Hero Section -->
-  <section class="bg-gray-100 text-gray-900 py-24 md:py-36">
-    <div class="container mx-auto px-4 sm:px-6 text-center">
-      <h1 class="text-5xl sm:text-6xl md:text-7xl font-extrabold mb-4">
-        Turning Traffic Into Real Clients 🚀
-      </h1>
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-light max-w-3xl mx-auto mb-8 text-gray-700">
-        Hi, I’m <span class="font-semibold">Moadat Zahra</span>, a <strong>Digital Marketing Strategist</strong> specializing in 
-        <strong>SEO, Google Ads, Meta Ads, and Lead Generation</strong>.  
-        I help businesses grow traffic, boost reach, and maximize ROI with smart digital campaigns.
-      </h2>
-      <a href="#contact" class="inline-block bg-gradient-purple text-white font-bold text-lg py-4 px-12 rounded-full shadow-lg hover:scale-105 transition">
-        Work With Me
-      </a>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="py-16 md:py-24 bg-white">
-    <div class="container mx-auto px-4 sm:px-6 text-center">
-      <h2 class="text-3xl sm:text-4xl font-bold mb-12">About Me</h2>
-      <p class="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
-        I am a **results-driven digital marketer** with expertise in creating campaigns that deliver measurable results.  
-        From **SEO optimization** to **Google & Meta Ads**, and from **branding** to **email marketing**, I ensure your business gets the visibility and conversions it deserves.
-      </p>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section id="services" class="py-16 md:py-24 bg-gray-100">
-    <div class="container mx-auto px-4 sm:px-6">
-      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-16">My Core Services</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-white p-8 rounded-xl shadow-md card">
-          <h3 class="text-2xl font-semibold mb-4 text-gradient-purple">Lead Generation</h3>
-          <p class="text-gray-600">High-quality leads through optimized funnels that drive sales and conversions.</p>
-        </div>
-        <div class="bg-white p-8 rounded-xl shadow-md card">
-          <h3 class="text-2xl font-semibold mb-4 text-gradient-purple">Google & Meta Ads</h3>
-          <p class="text-gray-600">Powerful ad campaigns to increase traffic, boost reach, and generate instant ROI.</p>
-        </div>
-        <div class="bg-white p-8 rounded-xl shadow-md card">
-          <h3 class="text-2xl font-semibold mb-4 text-gradient-purple">SEO Optimization</h3>
-          <p class="text-gray-600">Boost your rankings, grow organic traffic, and dominate search results.</p>
-        </div>
-        <div class="bg-white p-8 rounded-xl shadow-md card">
-          <h3 class="text-2xl font-semibold mb-4 text-gradient-purple">Branding & Design</h3>
-          <p class="text-gray-600">Strong visual branding and creative assets that connect with your audience.</p>
-        </div>
-        <div class="bg-white p-8 rounded-xl shadow-md card">
-          <h3 class="text-2xl font-semibold mb-4 text-gradient-purple">Email Marketing</h3>
-          <p class="text-gray-600">Strategic campaigns to nurture leads and build lasting relationships.</p>
-        </div>
+  <!-- Portfolio Section -->
+  <section>
+    <h2>My Work</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Project One</h3>
+        <p>Description of your first project goes here. Highlight your role and results.</p>
+      </div>
+      <div class="project-card">
+        <h3>Project Two</h3>
+        <p>Description of your second project goes here. Showcase your skills.</p>
+      </div>
+      <div class="project-card">
+        <h3>Project Three</h3>
+        <p>Description of your third project goes here. Add links if available.</p>
       </div>
     </div>
   </section>
 
-  <!-- Portfolio -->
-  <section id="portfolio" class="py-16 md:py-24 bg-white">
-    <div class="container mx-auto px-4 sm:px-6">
-      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-16">My Work</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-gray-100 rounded-xl shadow-md overflow-hidden card">
-          <img src="https://placehold.co/600x400/e5e7eb/4b5563?text=Lead+Gen+Campaign" alt="Lead Gen Campaign" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-xl font-semibold mb-2">Lead Gen Campaign</h3>
-            <p class="text-gray-600">Achieved 45% increase in qualified leads for a client in just 3 months.</p>
-          </div>
-        </div>
-        <div class="bg-gray-100 rounded-xl shadow-md overflow-hidden card">
-          <img src="https://placehold.co/600x400/e5e7eb/4b5563?text=SEO+Strategy" alt="SEO Strategy" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-xl font-semibold mb-2">SEO Growth</h3>
-            <p class="text-gray-600">Implemented full SEO strategy leading to 150% organic traffic growth.</p>
-          </div>
-        </div>
-        <div class="bg-gray-100 rounded-xl shadow-md overflow-hidden card">
-          <img src="https://placehold.co/600x400/e5e7eb/4b5563?text=Branding" alt="Branding Project" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-xl font-semibold mb-2">Branding & Design</h3>
-            <p class="text-gray-600">Built a brand identity that boosted recognition and engagement by 30%.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="py-16 md:py-24 bg-gray-100">
-    <div class="container mx-auto px-4 sm:px-6">
-      <h2 class="text-3xl sm:text-4xl font-bold text-center mb-16">Work With Me</h2>
-      <div class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-2xl">
-        <p class="text-center text-gray-600 mb-6">
-          Ready to scale your business? Send me a message below 👇
-        </p>
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-          <div class="mb-4">
-            <label for="name" class="block text-gray-700 mb-2">Your Name</label>
-            <input type="text" name="name" id="name" required class="w-full px-4 py-3 bg-gray-100 rounded-md focus:ring-2 focus:ring-purple-500">
-          </div>
-          <div class="mb-4">
-            <label for="email" class="block text-gray-700 mb-2">Your Email</label>
-            <input type="email" name="_replyto" id="email" required class="w-full px-4 py-3 bg-gray-100 rounded-md focus:ring-2 focus:ring-purple-500">
-          </div>
-          <div class="mb-4">
-            <label for="message" class="block text-gray-700 mb-2">Message</label>
-            <textarea name="message" id="message" rows="4" required class="w-full px-4 py-3 bg-gray-100 rounded-md focus:ring-2 focus:ring-purple-500"></textarea>
-          </div>
-          <button type="submit" class="w-full bg-gradient-purple text-white font-bold py-4 rounded-md shadow-lg hover:scale-105 transition">
-            Send Message
-          </button>
-        </form>
-      </div>
-    </div>
+  <!-- Contact Section -->
+  <section>
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/xvgbnbkq" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-900 text-gray-400 py-8 text-center">
-    <p>&copy; <span id="year"></span> Moadat Zahra. All Rights Reserved.</p>
+  <footer>
+    <p>© 2025 Moadat Zahra | All Rights Reserved</p>
   </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const menuButton = document.getElementById('menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    menuButton.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-  </script>
 </body>
 </html>
