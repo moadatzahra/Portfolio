@@ -63,22 +63,22 @@
   </div>
 </section>
 
-<!-- Testimonials Section -->
+<!-- Testimonials Carousel Section -->
 <section id="testimonials">
   <div class="container">
     <h2>Testimonials</h2>
-    <div class="grid">
-      <div class="card">
+    <div class="testimonial-carousel">
+      <div class="testimonial-card active">
         <img src="client1.jpg" alt="Client A" class="testimonial-avatar">
         <p>"Moadat helped us double our leads in just 2 months!"</p>
         <span>– Client A</span>
       </div>
-      <div class="card">
+      <div class="testimonial-card">
         <img src="client2.jpg" alt="Client B" class="testimonial-avatar">
         <p>"Highly professional and efficient. SEO results were amazing."</p>
         <span>– Client B</span>
       </div>
-      <div class="card">
+      <div class="testimonial-card">
         <img src="client3.jpg" alt="Client C" class="testimonial-avatar">
         <p>"Her social media strategies increased engagement by 80%!"</p>
         <span>– Client C</span>
@@ -91,11 +91,11 @@
 <section id="clients">
   <div class="container">
     <h2>Previous Clients</h2>
-    <div class="grid">
-      <div class="card">ABC Company – SEO Optimization</div>
-      <div class="card">XYZ Startup – Social Media Campaign</div>
-      <div class="card">123 Corp – Lead Generation</div>
-      <div class="card">BrandCo – Meta Ads Strategy</div>
+    <div class="client-logos">
+      <img src="client-logo1.png" alt="ABC Company">
+      <img src="client-logo2.png" alt="XYZ Startup">
+      <img src="client-logo3.png" alt="123 Corp">
+      <img src="client-logo4.png" alt="BrandCo">
     </div>
   </div>
 </section>
@@ -118,6 +118,21 @@
   <p>© 2025 Moadat Zahra | All Rights Reserved</p>
 </footer>
 
+<!-- JS for testimonial carousel -->
+<script>
+const testimonials = document.querySelectorAll('.testimonial-card');
+let current = 0;
+
+function showTestimonial(index){
+  testimonials.forEach((t, i) => t.classList.remove('active'));
+  testimonials[index].classList.add('active');
+}
+
+setInterval(() => {
+  current = (current + 1) % testimonials.length;
+  showTestimonial(current);
+}, 5000);
+</script>
+
 </body>
 </html>
-
