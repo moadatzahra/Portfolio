@@ -1,86 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Moadat Zahra | Digital Marketing Strategist</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Profile Card</title>
+
+<style>
+    body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #0a0f1f, #111827, #1e293b);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    /* Floating glowing shapes */
+    .glow-circle {
+        position: absolute;
+        width: 280px;
+        height: 280px;
+        background: radial-gradient(circle, rgba(0,183,255,0.5), transparent 60%);
+        border-radius: 50%;
+        top: -60px;
+        right: -40px;
+        filter: blur(40px);
+        animation: float 6s infinite ease-in-out alternate;
+    }
+
+    .glow-circle2 {
+        position: absolute;
+        width: 240px;
+        height: 240px;
+        background: radial-gradient(circle, rgba(255,0,120,0.45), transparent 60%);
+        border-radius: 50%;
+        bottom: -60px;
+        left: -40px;
+        filter: blur(40px);
+        animation: float 8s infinite ease-in-out alternate-reverse;
+    }
+
+    @keyframes float {
+        from { transform: translateY(0px); }
+        to { transform: translateY(30px); }
+    }
+
+    /* Main card */
+    .profile-card {
+        width: 370px;
+        padding: 30px;
+        background: rgba(255,255,255,0.08);
+        backdrop-filter: blur(20px);
+        border-radius: 25px;
+        box-shadow: 0 0 40px rgba(0,183,255,0.3);
+        border: 1px solid rgba(255,255,255,0.2);
+        text-align: center;
+        position: relative;
+        animation: float 5s infinite ease-in-out alternate;
+        transform-style: preserve-3d;
+    }
+
+    /* Profile Image Styling */
+    .profile-card img {
+        width: 130px;
+        height: 130px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid rgba(255,255,255,0.5);
+        box-shadow: 0 0 20px rgba(0,183,255,0.7);
+        transition: transform 0.5s ease;
+    }
+
+    .profile-card img:hover {
+        transform: scale(1.08) rotate3d(1, 1, 0, 10deg);
+    }
+
+    .profile-card h2 {
+        margin-top: 18px;
+        font-size: 26px;
+        letter-spacing: 1px;
+        color: #00eaff;
+        text-shadow: 0 0 10px rgba(0,238,255,0.6);
+    }
+
+    .profile-card p {
+        font-size: 14px;
+        color: #dbeafe;
+        margin-bottom: 18px;
+    }
+
+    .info-box {
+        background: rgba(255,255,255,0.1);
+        padding: 15px;
+        border-radius: 15px;
+        margin-top: 15px;
+        border: 1px solid rgba(255,255,255,0.2);
+        box-shadow: inset 0 0 20px rgba(255,255,255,0.08);
+    }
+
+    .info-box table {
+        width: 100%;
+        color: #e2e8f0;
+        font-size: 14px;
+    }
+
+    .info-box table td {
+        padding: 6px 0;
+    }
+
+</style>
 </head>
+
 <body>
-  <!-- Header Section -->
-  <header>
-    <div class="container">
-      <h1>Moadat Zahra</h1>
-      <p>Digital Marketing Strategist & SEO Specialist</p>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
-  <!-- About Section -->
-  <section id="about">
-    <div class="container about-section">
-      <img src="mZ.jpeg" alt="Moadat Zahra" class="profile-photo">
-      <div>
-        <h2>About Me</h2>
-        <p>
-          Hi 👋 I’m <strong>Moadat Zahra</strong>, a results-driven <strong>digital marketing strategist</strong> with expertise in SEO, social media, and data-driven campaigns. 
-          I help businesses build visibility, attract customers, and grow with impactful strategies.
-        </p>
-      </div>
-    </div>
-  </section>
+<div class="glow-circle"></div>
+<div class="glow-circle2"></div>
 
-  <!-- Services Section -->
-  <section id="services">
-    <div class="container">
-      <h2>Services</h2>
-      <div class="grid">
-        <div class="card">🚀 Lead Generation & Funnels</div>
-        <div class="card">📈 Meta & Google Ads</div>
-        <div class="card">🔍 SEO Optimization</div>
-        <div class="card">🎨 Branding & Creative Design</div>
-      </div>
-    </div>
-  </section>
+<div class="profile-card">
 
-  <!-- Skills Section -->
-  <section id="skills">
-    <div class="container">
-      <h2>My Skills</h2>
-      <ul class="skills">
-        <li>SEO & SEM</li>
-        <li>Google Ads / Meta Ads</li>
-        <li>Content Strategy</li>
-        <li>Email Marketing</li>
-        <li>Brand Growth</li>
-      </ul>
-    </div>
-  </section>
+    <img src="your-profile.jpg" alt="Profile Photo">
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <form action="https://formspree.io/f/xvgbnbkq" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-  </section>
+    <h2>Moadat Zahra</h2>
+    <p>Customer Support • Chat/Email Specialist • Remote Worker</p>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Moadat Zahra | All Rights Reserved</p>
-  </footer>
+    <div class="info-box">
+        <table>
+            <tr>
+                <td><strong>Email:</strong></td>
+                <td>workwithmoadatzahra@gmail.com</td>
+            </tr>
+            <tr>
+                <td><strong>Skills:</strong></td>
+                <td>Communication, CRM, Multitasking</td>
+            </tr>
+            <tr>
+                <td><strong>Experience:</strong></td>
+                <td>2+ years (Remote Support)</td>
+            </tr>
+        </table>
+    </div>
+
+</div>
+
 </body>
 </html>
+
 
