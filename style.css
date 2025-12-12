@@ -1,85 +1,209 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Moadat Zahra | Digital Marketing Strategist</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <!-- Header Section -->
-  <header>
-    <div class="container">
-      <h1>Moadat Zahra</h1>
-      <p>Digital Marketing Strategist & SEO Specialist</p>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+/* ==== GLOBAL RESET ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
 
-  <!-- About Section -->
-  <section id="about">
-    <div class="container about-section">
-      <img src="mZ.jpeg" alt="Moadat Zahra" class="profile-photo">
-      <div>
-        <h2>About Me</h2>
-        <p>
-          Hi 👋 I’m <strong>Moadat Zahra</strong>, a results-driven <strong>digital marketing strategist</strong> with expertise in SEO, social media, and data-driven campaigns. 
-          I help businesses build visibility, attract customers, and grow with impactful strategies.
-        </p>
-      </div>
-    </div>
-  </section>
+body {
+  background: linear-gradient(135deg, #dfe9f3, #ffffff);
+  color: #222;
+  overflow-x: hidden;
+}
 
-  <!-- Services Section -->
-  <section id="services">
-    <div class="container">
-      <h2>Services</h2>
-      <div class="grid">
-        <div class="card">🚀 Lead Generation & Funnels</div>
-        <div class="card">📈 Meta & Google Ads</div>
-        <div class="card">🔍 SEO Optimization</div>
-        <div class="card">🎨 Branding & Creative Design</div>
-      </div>
-    </div>
-  </section>
+/* ==== CONTAINER ==== */
+.container {
+  width: 85%;
+  margin: auto;
+  max-width: 1200px;
+}
 
-  <!-- Skills Section -->
-  <section id="skills">
-    <div class="container">
-      <h2>My Skills</h2>
-      <ul class="skills">
-        <li>SEO & SEM</li>
-        <li>Google Ads / Meta Ads</li>
-        <li>Content Strategy</li>
-        <li>Email Marketing</li>
-        <li>Brand Growth</li>
-      </ul>
-    </div>
-  </section>
+/* ==== HEADER ==== */
+header {
+  padding: 40px 0;
+  text-align: center;
+}
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <form action="https://formspree.io/f/xvgbnbkq" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-  </section>
+header h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Moadat Zahra | All Rights Reserved</p>
-  </footer>
-</body>
-</html>
+header p {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #555;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  padding: 10px 18px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+
+/* ==== GLASS CARD STYLE ==== */
+.card,
+.about-glass,
+.form-glass {
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 18px;
+  padding: 25px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  border: 1px solid rgba(255,255,255,0.4);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+
+/* ==== ABOUT SECTION ==== */
+#about {
+  padding: 90px 0;
+}
+
+.about-section {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* ==== PREMIUM FLOATING PROFILE PHOTO ==== */
+.profile-photo {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  /* Glow Border */
+  border: 4px solid rgba(255, 255, 255, 0.5);
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.2),
+    0 0 15px rgba(255, 255, 255, 0.6),
+    0 0 25px rgba(255, 255, 255, 0.4);
+
+  /* Floating 3D Effect */
+  transform: translateY(0px);
+  animation: floatImage 4s ease-in-out infinite;
+
+  /* Smooth edges */
+  backdrop-filter: blur(10px);
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+
+/* ==== SERVICES SECTION ==== */
+#services {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+
+/* ==== SKILLS ==== */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.skills li {
+  list-style: none;
+  background: rgba(255, 255, 255, 0.35);
+  padding: 12px 20px;
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.45);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+
+/* ==== CONTACT FORM ==== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+form input,
+form textarea {
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.4);
+  border: 1px solid rgba(255,255,255,0.5);
+  backdrop-filter: blur(8px);
+}
+
+button {
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 12px;
+  background: #111;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #333;
+}
+
+
+/* ==== FOOTER ==== */
+footer {
+  margin-top: 40px;
+  padding: 20px 0;
+  text-align: center;
+  color: #666;
+}
+
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
